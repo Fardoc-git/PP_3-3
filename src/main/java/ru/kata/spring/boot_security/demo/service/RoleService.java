@@ -6,6 +6,6 @@ import javax.transaction.Transactional;
 import java.util.Set;
 
 public interface RoleService {
-    @Transactional
+
     Set<Role> findAllRoles();
 }

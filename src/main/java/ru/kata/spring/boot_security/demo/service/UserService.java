@@ -13,19 +13,15 @@ import java.util.Optional;
 import java.util.stream.Collectors;
 
 public interface UserService extends UserDetailsService {
-    //    @Transactional
+
     User findByLastName(String lastname);
 
-    //    @Transactional
     Optional<User> findById(Long id);
 
-    //    @Transactional
     List<User> findAll();
 
-    @Transactional
     void saveUser(User user);
 
-    @Transactional
     void deleteById(Long id);
 
     default Collection<? extends GrantedAuthority> getGrantedAuthorities(Collection<Role> roles) {

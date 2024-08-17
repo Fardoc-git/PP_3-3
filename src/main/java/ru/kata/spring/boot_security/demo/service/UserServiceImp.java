@@ -26,19 +26,16 @@ public class UserServiceImp implements UserService {
         this.userRepository = userRepository;
     }
 
-//    @Transactional
 @Override
 public User findByLastName(String lastname) {
         return userRepository.findByLastName(lastname);
     }
 
-//    @Transactional
 @Override
 public Optional<User> findById(Long id) {
         return userRepository.findById(id);
     }
 
-//    @Transactional
 @Override
 public List<User> findAll() {
         return userRepository.findAll();
